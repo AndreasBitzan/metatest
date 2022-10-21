@@ -1,8 +1,12 @@
 import Head from "next/head";
 import React from "react";
 import { Styledheader } from "../components/header.styles";
+import { useStoreState } from "../context/custom_store";
 
 const Indexpage = () => {
+  const {isAuthenticated} = useStoreState();
+  console.log("Auth?");
+  console.log(isAuthenticated);
   return (
     <div>
       <Head>
@@ -27,7 +31,7 @@ const Indexpage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:image:type" content="image/jpeg" />
       </Head>
-      <Styledheader>Test</Styledheader>
+      <Styledheader>Test {isAuthenticated ? 'ANDREAS' : ""}</Styledheader>
       <p>gehts da?</p>
     </div>
   );
