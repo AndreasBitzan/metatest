@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import { Styledheader } from "../components/header.styles";
 
 const Indexpage = () => {
   return (
@@ -26,7 +27,7 @@ const Indexpage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:image:type" content="image/jpeg" />
       </Head>
-      <h1>Test</h1>
+      <Styledheader>Test</Styledheader>
       <p>gehts da?</p>
     </div>
   );
